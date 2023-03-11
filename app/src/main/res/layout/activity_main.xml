@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_700"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/weight_cardView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="26dp"
+        app:cardBackgroundColor="@color/blue_500"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@id/height_cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/weightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira_medium"
+                android:text="@string/weight"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toTopOf="@+id/weightEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/weightEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/saira"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:hint="@string/_0"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weightTextView"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira"
+                android:text="@string/kg"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/weightEditText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.838" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/height_cardView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/blue_500"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_cardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/heightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira_medium"
+                android:text="@string/height"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toTopOf="@id/heightEditText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/heightEditText"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/saira"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:hint="@string/_0"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/heightTextView"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <TextView
+                android:id="@+id/conversionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira"
+                android:text="@string/cm"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/heightEditText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.838" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/under_weight"
+        android:elevation="8dp"
+        android:fontFamily="@font/saira_medium"
+        android:text="@string/calculate"
+        android:textSize="28sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/result_cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height_cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/result_cardView"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/blue_500"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira_medium"
+                android:text="@string/result"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/body"
+                android:layout_width="40dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="4dp"
+                android:contentDescription="@null"
+                app:layout_constraintBottom_toBottomOf="@id/resultRangeNumber1"
+                app:layout_constraintStart_toEndOf="@id/resultDescription"
+                app:layout_constraintTop_toTopOf="@id/resultDescription"
+                tools:src="@drawable/healthy" />
+
+            <TextView
+                android:id="@+id/resultDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/saira_medium"
+                android:textAlignment="center"
+                android:textSize="40sp"
+                app:layout_constraintBottom_toTopOf="@id/resultRangeNumber1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resultTextView"
+                tools:text="Healthy"
+                tools:textColor="@color/healthy" />
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/saira_medium"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="60sp"
+                app:layout_constraintBottom_toTopOf="@id/resultDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5"
+                tools:text="20.35" />
+
+            <TextView
+                android:id="@+id/resultRangeNumber1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:padding="6dp"
+                android:fontFamily="@font/saira"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/resultRangeNumber2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resultDescription"
+                app:layout_constraintVertical_bias="0.5"
+                tools:text="@string/healthy_range"
+                tools:textColor="@color/healthy" />
+
+            <TextView
+                android:id="@+id/resultRangeNumber2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/saira"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/resultRangeNumber1"
+                app:layout_constraintVertical_bias="0.5"
+                tools:text="(Normal range is 18.25 - 24.9)" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

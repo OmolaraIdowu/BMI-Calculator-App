@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="weight">Weight</string>
+    <string name="kg">Kg</string>
+    <string name="cm">Cm</string>
+    <string name="height">Height</string>
+    <string name="_0">0</string>
+    <string name="calculate">Calculate</string>
+    <string name="underweight_range">Needs attention!</string>
+    <string name="normal_range">(Normal range is 18.5 – 24.9)</string>
+    <string name="overweight_range">Excess weight detected!</string>
+    <string name="obesity_range">Moderate risk!</string>
+    <string name="extremely_obesity_range">Serious health concern!</string>
+    <string name="under_weight">Underweight</string>
+    <string name="healthy">Healthy</string>
+    <string name="over_weight">Overweight</string>
+    <string name="obesity">Obesity</string>
+    <string name="extremely_obesity">Extremely Obesity</string>
+    <string name="result">Nothing here</string>
+    <string name="healthy_range">You\'re in great shape!</string>
+</resources>
